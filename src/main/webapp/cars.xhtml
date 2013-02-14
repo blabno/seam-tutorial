@@ -2,21 +2,27 @@
         PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <f:view locale="#{userLocale}"/>
 
 <h:head>
     <title>Cars</title>
+    <h:outputStylesheet>
+        .highlight {
+            color: red;
+        }
+    </h:outputStylesheet>
 </h:head>
 
 <h:body>
     CurrentUser: #{currentUser}:#{currentUser.email}
     <h:form>
-        <h:selectOneListbox value="#{localeSelector.locale}" size="1" onchange="this.form.submit()">
-            <f:selectItems value="#{supportedLocales}" var="locale" itemValue="#{locale}" itemLabel="#{locale.displayName}"/>
-            <f:converter converterId="localeConverter"/>
-        </h:selectOneListbox>
+
+        <ui:repeat value="#{supportedLocales}" var="locale">
+            <h:commandLink value="#{locale.displayName}" action="#{localeSelector.setLocale(locale)}" styleClass="#{locale==userLocale?'highlight':''}"/>&nbsp;
+        </ui:repeat>
     </h:form>
     <h:form>
         <h:dataTable value="#{carListView.cars}" var="car">
