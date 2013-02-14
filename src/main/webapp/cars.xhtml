@@ -9,6 +9,7 @@
 </h:head>
 
 <h:body>
+    CurrentUser: #{currentUser}:#{currentUser.email}
 
     <h:form>
         <h:dataTable value="#{carListView.cars}" var="car">
@@ -25,8 +26,6 @@
     </h:form>
 
     #{carDetailsView.car.model}
-
-    #{currentUser}:#{currentUser.email}
 
 </h:body>
 
