@@ -1,15 +1,15 @@
 package pl.itcrowd.tutorials.itc;
 
-import javax.enterprise.context.SessionScoped;
 import javax.enterprise.event.Event;
 import javax.enterprise.util.AnnotationLiteral;
+import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
 @Named
-@SessionScoped
+@ViewScoped
 public class CarListView implements Serializable {
 
     @Inject

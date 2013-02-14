@@ -1,6 +1,6 @@
 package pl.itcrowd.tutorials.itc;
 
-import javax.faces.bean.ApplicationScoped;
+import javax.enterprise.context.ApplicationScoped;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

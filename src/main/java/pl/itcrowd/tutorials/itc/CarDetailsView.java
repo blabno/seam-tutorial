@@ -1,13 +1,13 @@
 package pl.itcrowd.tutorials.itc;
 
-import javax.enterprise.context.SessionScoped;
 import javax.enterprise.event.Observes;
+import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
 @Named
-@SessionScoped
+@ViewScoped
 public class CarDetailsView implements Serializable {
 
     private Car car;
