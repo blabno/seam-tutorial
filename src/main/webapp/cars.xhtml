@@ -4,13 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
 
+<f:view locale="#{userLocale}"/>
+
 <h:head>
     <title>Cars</title>
 </h:head>
 
 <h:body>
     CurrentUser: #{currentUser}:#{currentUser.email}
-
+    <h:form>
+        <h:selectOneListbox value="#{localeSelector.locale}" size="1" onchange="this.form.submit()">
+            <f:selectItems value="#{supportedLocales}" var="locale" itemValue="#{locale}" itemLabel="#{locale.displayName}"/>
+            <f:converter converterId="localeConverter"/>
+        </h:selectOneListbox>
+    </h:form>
     <h:form>
         <h:dataTable value="#{carListView.cars}" var="car">
             <h:column>
