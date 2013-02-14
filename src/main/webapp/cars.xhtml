@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Cars</title>
+</h:head>
+
+<h:body>
+
+    <h:form>
+        <h:dataTable value="#{carListView.cars}" var="car">
+            <h:column>
+                <f:facet name="header">Model</f:facet>
+                #{car.model}
+            </h:column>
+            <h:column>
+                <h:commandButton value="Select" action="#{carListView.select(car)}"/>
+                <h:commandButton value="Remove" action="#{carListView.remove(car)}"/>
+            </h:column>
+        </h:dataTable>
+        <h:commandButton value="Login" action="#{currenUserManager.login}"/>
+    </h:form>
+
+    #{carDetailsView.car.model}
+
+    #{currentUser}:#{currentUser.email}
+
+</h:body>
+
+</html>
