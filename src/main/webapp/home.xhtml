@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <h:form>
+        <h:dataTable id="users" value="#{homeView.users}" var="user">
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                #{user.email}
+            </h:column>
+            <h:column>
+                <h:commandLink value="Remove" action="#{homeView.removeUser(user)}">
+                    <f:ajax render="@form"/>
+                </h:commandLink>
+            </h:column>
+        </h:dataTable>
+    </h:form>
+
+</h:body>
+
+</html>

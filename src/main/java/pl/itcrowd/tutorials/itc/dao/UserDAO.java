@@ -4,6 +4,7 @@ import pl.itcrowd.tutorials.itc.domain.User;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @ApplicationScoped
@@ -18,6 +19,11 @@ public class UserDAO {
         users.add(new User("jack@itcrowd.pl", "aaaaa", "user"));
     }
 
+    public List<User> getAllUsers()
+    {
+        return Collections.unmodifiableList(users);
+    }
+
     public User getUserByEmail(String email)
     {
         for (User user : users) {
@@ -26,5 +32,10 @@ public class UserDAO {
             }
         }
         return null;
+    }
+
+    public void remove(User user)
+    {
+        users.remove(user);
     }
 }
