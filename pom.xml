@@ -14,6 +14,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.jboss.seam.faces</groupId>
             <artifactId>seam-faces</artifactId>
             <version>3.1.0.Final</version>
@@ -21,6 +27,11 @@
         <dependency>
             <groupId>org.jboss.seam.international</groupId>
             <artifactId>seam-international</artifactId>
+            <version>3.1.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam.mail</groupId>
+            <artifactId>seam-mail</artifactId>
             <version>3.1.0.Final</version>
         </dependency>
         <dependency>
