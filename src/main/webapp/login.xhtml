@@ -9,7 +9,10 @@
 </h:head>
 
 <h:body>
-    <h:form>
+    <h:outputScript rendered="#{identity.loggedIn}">
+        document.location='#{request.contextPath}/home.jsf';
+    </h:outputScript>
+    <h:form rendered="#{not identity.loggedIn}">
         <h:panelGrid columns="2">
             <h:outputLabel value="Login" for="login"/>
             <h:inputText id="login" value="#{credentials.username}"/>

@@ -9,6 +9,7 @@
 </h:head>
 
 <h:body>
+    <h:link value="Login" outcome="login" rendered="#{not identity.loggedIn}"/>
     <h:form>
         <h:dataTable id="users" value="#{homeView.users}" var="user">
             <h:column>
@@ -16,7 +17,7 @@
                 #{user.email}
             </h:column>
             <h:column>
-                <h:commandLink value="Remove" action="#{homeView.removeUser(user)}">
+                <h:commandLink value="Remove" action="#{homeView.removeUser(user)}" rendered="#{authorizer.admin}">
                     <f:ajax render="@form"/>
                 </h:commandLink>
             </h:column>
