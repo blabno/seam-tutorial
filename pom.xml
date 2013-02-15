@@ -24,15 +24,20 @@
             <version>3.1.0.Final</version>
         </dependency>
         <dependency>
+            <groupId>org.jboss.seam.persistence</groupId>
+            <artifactId>seam-persistence</artifactId>
+            <version>3.1.0.Final</version>
+        </dependency>
+        <dependency>
             <groupId>org.jboss.seam.security</groupId>
             <artifactId>seam-security</artifactId>
             <version>3.1.0.Final</version>
         </dependency>
         <dependency>
-            <groupId>org.jboss.spec.javax.faces</groupId>
-            <artifactId>jboss-jsf-api_2.1_spec</artifactId>
-            <version>2.0.1.Final</version>
-            <scope>provided</scope>
+            <groupId>org.jboss.spec</groupId>
+            <artifactId>jboss-javaee-web-6.0</artifactId>
+            <version>3.0.2.Final</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
     <build>
