@@ -1,4 +1,4 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.domain;
 
 import java.io.Serializable;
 

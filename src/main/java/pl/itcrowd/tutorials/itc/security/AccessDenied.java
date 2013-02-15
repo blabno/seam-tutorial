@@ -1,4 +1,4 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.security;
 
 import org.jboss.seam.faces.event.PhaseIdType;
 import org.jboss.seam.faces.security.RestrictAtPhase;

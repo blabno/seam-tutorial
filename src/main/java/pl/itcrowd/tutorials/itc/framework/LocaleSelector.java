@@ -1,4 +1,4 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.framework;
 
 import org.jboss.seam.international.Alter;
 import org.jboss.solder.core.Client;

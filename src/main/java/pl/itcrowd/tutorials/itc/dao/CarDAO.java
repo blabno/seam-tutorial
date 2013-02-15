@@ -1,4 +1,6 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.dao;
+
+import pl.itcrowd.tutorials.itc.domain.Car;
 
 import javax.enterprise.context.ApplicationScoped;
 import java.io.Serializable;

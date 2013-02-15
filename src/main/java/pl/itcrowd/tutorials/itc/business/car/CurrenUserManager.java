@@ -1,4 +1,7 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.business.car;
+
+import pl.itcrowd.tutorials.itc.domain.User;
+import pl.itcrowd.tutorials.itc.security.CurrentUser;
 
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Produces;

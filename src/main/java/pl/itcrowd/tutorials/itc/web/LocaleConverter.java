@@ -1,4 +1,4 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.web;
 
 import org.jboss.seam.international.locale.LocaleUtils;
 

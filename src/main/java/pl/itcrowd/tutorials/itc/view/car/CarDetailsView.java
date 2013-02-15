@@ -1,4 +1,10 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.view.car;
+
+import pl.itcrowd.tutorials.itc.domain.Car;
+import pl.itcrowd.tutorials.itc.domain.User;
+import pl.itcrowd.tutorials.itc.framework.Removed;
+import pl.itcrowd.tutorials.itc.framework.Selected;
+import pl.itcrowd.tutorials.itc.security.CurrentUser;
 
 import javax.enterprise.event.Observes;
 import javax.faces.bean.ViewScoped;

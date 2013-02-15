@@ -1,4 +1,4 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.framework;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;
@@ -13,6 +13,6 @@ import static java.lang.annotation.ElementType.TYPE;
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
 @Target({METHOD, FIELD, PARAMETER, TYPE})
-public @interface CurrentUser {
+public @interface Removed {
 
 }

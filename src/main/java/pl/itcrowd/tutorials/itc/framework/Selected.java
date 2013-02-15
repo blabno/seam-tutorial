@@ -1,4 +1,4 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.framework;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;

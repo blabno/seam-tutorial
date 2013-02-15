@@ -1,7 +1,11 @@
-package pl.itcrowd.tutorials.itc;
+package pl.itcrowd.tutorials.itc.view.car;
 
 import org.jboss.seam.international.status.Messages;
 import org.jboss.seam.international.status.builder.BundleKey;
+import pl.itcrowd.tutorials.itc.dao.CarDAO;
+import pl.itcrowd.tutorials.itc.domain.Car;
+import pl.itcrowd.tutorials.itc.framework.Removed;
+import pl.itcrowd.tutorials.itc.framework.Selected;
 
 import javax.enterprise.event.Event;
 import javax.enterprise.util.AnnotationLiteral;
@@ -37,7 +41,7 @@ public class CarListView implements Serializable {
     {
         carDAO.remove(car);
         carRemovedEvent.fire(car);
-        messages.info(new BundleKey("messages", "pl.itcrowd.tutorials.itc.CarListView.carRemoved"), car.getModel());
+        messages.info(new BundleKey("messages", "pl.itcrowd.tutorials.itc.view.car.CarListView.carRemoved"), car.getModel());
     }
 
     public void select(Car car)
